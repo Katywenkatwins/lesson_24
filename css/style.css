@@ -1,0 +1,348 @@
+@import url(https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed:regular,700,900,italic,700italic,900italic&display=swap);
+
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "Sofia Sans Condensed";
+  font-size: 1.125rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Sofia Sans Condensed";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/
+
+section {
+  background-color: rgba(42, 79, 90, 0.603);
+}
+
+.lesson_24 .header,
+.lesson_23 .header {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  background: -o-linear-gradient(34.05deg, rgba(42, 79, 90, 0.603) 0%, rgba(5, 47, 59, 0.788) 100%);
+  background: linear-gradient(55.95deg, rgba(42, 79, 90, 0.603) 0%, rgba(5, 47, 59, 0.788) 100%);
+}
+
+.lesson_24 .header__container,
+.lesson_23 .header__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.lesson_24 .header__container h1,
+.lesson_23 .header__container h1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.lesson_24__container,
+.lesson_23__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  padding: 30px 15px;
+}
+
+.lesson_24__container .wrong-item,
+.lesson_23__container .wrong-item {
+  padding-left: 30px;
+}
+
+.lesson_24__container .wrong-item::before,
+.lesson_23__container .wrong-item::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(104, 38, 38, 0.603);
+}
+
+.lesson_24__container .incorrect-item,
+.lesson_23__container .incorrect-item {
+  padding-left: 30px;
+}
+
+.lesson_24__container .incorrect-item::before,
+.lesson_23__container .incorrect-item::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(190, 152, 152, 0.603);
+}
+
+.lesson_24__container h2,
+.lesson_23__container h2 {
+  display: block;
+  color: #fff;
+  background-color: rgba(5, 47, 59, 0.623);
+  border: rgba(5, 47, 59, 0.623) 1px solid;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 2rem;
+  padding: 5px;
+}
+
+.lesson_24__container h3,
+.lesson_23__container h3 {
+  font-size: 1.5rem;
+  color: rgba(5, 53, 59, 0.603);
+}
+
+.lesson_24__container ol,
+.lesson_23__container ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.lesson_24__container ol li,
+.lesson_23__container ol li {
+  padding: 5px;
+}
+
+.lesson_24__container ol .wrong,
+.lesson_23__container ol .wrong {
+  background-color: rgba(104, 38, 38, 0.603);
+}
+
+.lesson_24__container ol .not-correct,
+.lesson_23__container ol .not-correct {
+  background-color: rgba(190, 152, 152, 0.603);
+}
+
+.lesson_24__container ol span,
+.lesson_23__container ol span {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+.lesson_24__container .answer,
+.lesson_23__container .answer {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+.lesson_24__container .answer::before,
+.lesson_23__container .answer::before {
+  content: "Відповідь: ";
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomeWorkPage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230120135524">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+			</div>
+		</header>
+		<main class="page">
+			<section class="lesson_24">
+				<header class="lesson-24__header header">
+					<div class="header__container">
+						<h1>Урок 24</h1>
+					</div>
+				</header>
+				<div class="lesson_24__container">
+
+					<h2>Функції JS</h2>
+					<h3>Задача №1 Хто попаде в консоль першим Вася чи Коля?</h3>
+					function showName(){<br>
+					console.log('Вася!');<br>
+					}<br>
+					setTimeout(showName, 0);<br>
+					console.log('Коля!');<br>
+					<span class="answer">першим попаде Коля!, потім Вася!</span>
+					<h3>Задача №2 Чи вірний виклик функції?</h3>
+					showMessage();<br>
+					function showMessage(){<br>
+					console.log('Повідомлення');<br>
+					}<br>
+					<span class="answer">так, функція виконується</span>
+					<h3>Задача №3 Чи вірний виклик функції?</h3>
+					showMessage();<br>
+					let showMessage = function (){<br>
+					console.log('Повідомлення');<br>
+					}<br>
+					<span class="answer">ні, функція викликається раніше. ніж об'явлена змінна </span>
+					<h3>Задача №4 Як вирішити проблему?</h3>
+					if(2>1){<br>
+					function showMessage(){<br>
+					console.log('Повідомлення');<br>
+					}<br>
+					}<br>
+					showMessage(); //Error<br>
+					<span class="answer"> </span>
+					let showMessage;<br>
+					if(2>1){<br>
+					showMessage = function (){<br>
+					console.log('Повідомлення');<br>
+					}<br>
+					}<br>
+					showMessage();
+					<h2 class="object1">Масиви</h2>
+					<h3>Задача №1 Яке число(довжину) ми отримаємо?</h3>
+					let arr = ['Ваня', 'Іштван', 'Оля',];<br>
+					let newArr = arr;<br>
+					newArr.push('Петро');<br>
+					console.log(arr.length);<br>
+					<span class="answer">довжина масиву arr 4</span>
+					<h3>Задача №2 Створити масив users з елементами "Ваня" і "Іштван". Додати в кінець "Оля". Замінити
+						значення Іштван на Петя. Код для пошуку має працювати для масивів будь-якої довжини. Видаліть перший
+						елемент масиву та покажіть його. Вставити "Маша та "Паша" на початок масиву.</h3>
+					<span class="answer"></span>
+					let users = ['Ваня', 'Іштван'];<br>
+					users.push('Оля');<br>
+					users.forEach( (user, i) => {<br>
+					if (user === "Іштван") users[i] = 'Петя'; }<br>
+					);<br>
+					let removed = users.splice(0, 1);<br>
+					console.log(removed);<br>
+					users.splice(0, 0, 'Маша', 'Паша');<br>
+					<h3>Задача №3 Видалити елемент "Іштван" та повернути його в змінну </h3>
+					<span class="answer"></span>
+					let users = ['Ваня', 'Іштван', 'Оля'];<br>
+					let removed = users.splice(1, 1);<br>
+					console.log(removed);<br>
+					<h3>Задача №4 зробити із рядка масив </h3>
+					let str = 'Ваня,Іштван,Оля';<br>
+					<span class="answer"></span>
+					let arr = str.split(',');<br>
+					console.log(arr);<br>
+					<h3>Задача №5 Чому дорівнює на початку роботи методу? </h3>
+					let arr = [9, 2, 8,];<br>
+					let reduseValue = arrTwo.reduce(function(previousValue, item, index, array){<br>
+					console.log(previousValue);}<br>
+					);<br>
+					<span class="answer">Помилка в умові задачі. arrTwo не об'явлений. Якщо працюємо з масивом arr виводить
+						значення 9 і Undefinded</span>
+					<h2>DOM</h2>
+					<h3>Задача №1 Отримати в змінну елемент з атрибутом data-say-hi і прочитати значення цього атрибуту</h3>
+					&ltdiv data-say-hi="yes">Привет!&lt/div>
+					<span class="answer"></span>
+					const element = document.querySelector('div');<br>
+					console.log(element.dataset.sayHi);<br>
+					<h3>Задача №2 Отриимати в змінну елемент з текстом Йончі</h3>
+					&ltul><br>
+					&ltli>Корчі&lt/li><br>
+					&ltli>Йончі&lt/li><br>
+					&lt/ul>
+					<ul class="list-task2">
+						<li>Корчі</li>
+						<li>Йончі</li>
+					</ul>
+					<span class="answer"></span>
+					const elementLi = document.querySelector('ul');<br>
+					const liElem = elementLi.lastElementChild;
+					<h3 class="object2">Задача №3 Отриимати в змінну колекцію елементів з класом like</h3>
+					&ltdiv class="like">&lt/div><br>
+					&ltdiv class="subscribe">&lt/div><br>
+					&ltdiv class="like subscribe">&lt/div><br>
+					<div class="like"></div>
+					<div class="subscribe"></div>
+					<div class="like subscribe"></div>
+					<span class="answer">const elemsLike = document.querySelectorAll('.like');</span>
+					<h3>Задача №4 Куди додасться тег li </h3>
+					const list = document.querySelectorAll('ul');<br>
+					list.insertAdjasentHTML(<br>
+					'beforeend',<br>
+					'&ltli>Текст&lt/li>'<br>
+					)
+
+					&ltul><br>
+					&ltli>Пункт №1&lt/li><br>
+					&ltli>Пункт №2&lt/li><br>
+					&lt/ul>
+
+					<span class="answer"> останнім дочірнім елементом тегу ul перед закриттям тегу, тобто після Пункт №2 в списку</span>
+
+					<h2>Розміри. прокрутка та координати елементів</h2>
+					<h3>Задача №1 Узнати ширину стрічки прогортання</h3>
+
+					<span class="answer"></span>
+					const mainElement = document.documentElement;<br>
+					const lineWidth = +window.innerWidth - +mainElement.clientWidth;<br>
+					console.log(lineWidth);<br>
+					<h3>Задача №2 Змусити браузер прогорнутись на 100рх зверху з затримкою 1сек після відкриття
+						сторінки</h3>
+
+					<span class="answer object3"></span>
+					function setScrollOption(){<br>
+					window.scrollBy(0, 100);<br>
+					}<br>
+					setTimeout(setScrollOption, 1000);<br>
+					<h3>Задача №3 Отримати координати 3 будь-яких елементів на сторінці </h3>
+
+					<span class="answer"></span>
+					const object1 = document.querySelector(".object1");<br>
+					const object1Coord = object1.getBoundingClientRect();<br>
+					console.log(object1Coord);<br>
+					const object2 = document.querySelector(".object2");<br>
+					const object2Coord = object2.getBoundingClientRect();<br>
+					console.log(object2Coord);<br>
+					const object3 = document.querySelector(".object3");<br>
+					const object3Coord = object3.getBoundingClientRect();<br>
+					console.log(object3Coord);<br>
+					DOMRect {x: 638.953125, y: 1107, width: 96.078125, height: 44, top: 1107, …}<br>
+					DOMRect {x: 102, y: 2769, width: 1170, height: 24, top: 2769, …}<br>
+					DOMRect {x: 102, y: 3537, width: 1170, height: 32, top: 3537, …}<br>
+
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230120135524">
+
+	</script>
+</body>
+
+</html>
