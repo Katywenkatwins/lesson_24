@@ -100,15 +100,15 @@
 						значення 9 і Undefinded</span>
 					<h2>DOM</h2>
 					<h3>Задача №1 Отримати в змінну елемент з атрибутом data-say-hi і прочитати значення цього атрибуту</h3>
-					&ltdiv data-say-hi="yes">Привет!&lt/div>
+					&lt div data-say-hi="yes">Привет!&lt /div>
 					<span class="answer"></span>
 					const element = document.querySelector('div');<br>
 					console.log(element.dataset.sayHi);<br>
 					<h3>Задача №2 Отриимати в змінну елемент з текстом Йончі</h3>
-					&ltul><br>
-					&ltli>Корчі&lt/li><br>
-					&ltli>Йончі&lt/li><br>
-					&lt/ul>
+					&lt ul><br>
+					&lt li>Корчі&lt /li><br>
+					&lt li>Йончі&lt /li><br>
+					&lt /ul>
 					<ul class="list-task2">
 						<li>Корчі</li>
 						<li>Йончі</li>
@@ -117,9 +117,9 @@
 					const elementLi = document.querySelector('ul');<br>
 					const liElem = elementLi.lastElementChild;
 					<h3 class="object2">Задача №3 Отриимати в змінну колекцію елементів з класом like</h3>
-					&ltdiv class="like">&lt/div><br>
-					&ltdiv class="subscribe">&lt/div><br>
-					&ltdiv class="like subscribe">&lt/div><br>
+					&lt div class="like">&lt /div><br>
+					&lt div class="subscribe">&lt /div><br>
+					&lt div class="like subscribe">&lt /div><br>
 					<div class="like"></div>
 					<div class="subscribe"></div>
 					<div class="like subscribe"></div>
@@ -128,15 +128,16 @@
 					const list = document.querySelectorAll('ul');<br>
 					list.insertAdjasentHTML(<br>
 					'beforeend',<br>
-					'&ltli>Текст&lt/li>'<br>
+					'&lt li>Текст&lt /li>'<br>
 					)
 
-					&ltul><br>
-					&ltli>Пункт №1&lt/li><br>
-					&ltli>Пункт №2&lt/li><br>
-					&lt/ul>
+					&lt ul><br>
+					&lt li>Пункт №1&lt /li><br>
+					&lt li>Пункт №2&lt /li><br>
+					&lt /ul>
 
-					<span class="answer"> останнім дочірнім елементом тегу ul перед закриттям тегу, тобто після Пункт №2 в списку</span>
+					<span class="answer"> останнім дочірнім елементом тегу ul перед закриттям тегу, тобто після Пункт №2 в
+						списку</span>
 
 					<h2>Розміри. прокрутка та координати елементів</h2>
 					<h3>Задача №1 Узнати ширину стрічки прогортання</h3>
